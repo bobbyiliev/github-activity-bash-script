@@ -1,0 +1,1 @@
+# github-activity-bash-script
