@@ -1,5 +1,17 @@
 # GitHub Activity Demo Script
 
+This script aims to prove why you should be too quick at judging people by their GitHub activity stats.
+
+The script will turn your contributions graph from this:
+
+![GitHub Activity Before](https://imgur.com/SFQ3RJz.png)
+
+Into this:
+
+![GitHub Activity After](https://imgur.com/xJ6MjFH.png)
+
+In 20-30 seconds.
+
 > Use for demo purposes only!
 
 To execute just run the following commaind inside a demo repository:
