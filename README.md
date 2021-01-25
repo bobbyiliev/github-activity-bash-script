@@ -1,6 +1,6 @@
 # GitHub Activity Demo Script
 
-This script aims to prove why you should be too quick at judging people by their GitHub activity stats.
+This script aims to prove why you should not be too quick at judging people by their GitHub activity stats.
 
 The script will turn your contributions graph from this:
 
