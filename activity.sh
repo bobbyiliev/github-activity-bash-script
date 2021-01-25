@@ -30,16 +30,19 @@ fi
 for day in {1..365} ; do
     # Get the past date of the commit
     day=$(date --date="-${day} day")
+
     echo "Creating commits for ${day}"
+
     # Generate random number of commits for that date
     commits=$(( ( RANDOM % 6 )  + 2 ))
+
     # Create the comits
     echo "Creating ${commits} commits"
     for ((i=1;i<=${commits};i++)); do
         content=$(date -d "$day" +"%s")
         echo ${content}-${i} >> .commits/changes
-        git commit -am "Commit number ${content}-${i}"
-        git commit --amend --no-edit --date "${day}"
+        git commit -am "Commit number ${content}-${i}" > /dev/null 2>&1
+        git commit --amend --no-edit --date "${day}" > /dev/null 2>&1
     done
 done
 
