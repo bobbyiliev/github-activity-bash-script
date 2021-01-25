@@ -32,3 +32,7 @@ git push origin -f your_branch_name"
 In case that you are interested in learning more about Bash Scripting, make sure to checkout this open-source eBook:
 
 **[Introduction to Bash Scripting](https://github.com/bobbyiliev/introduction-to-bash-scripting)**
+
+# Blog Post
+
+[Here is why you should not be too quick at judging people by their GitHub activity stats](https://devdojo.com/bobbyiliev/here-is-why-you-should-not-be-too-quick-at-judging-people-by-their-github-activity-stats?ref=bobbyiliev)
