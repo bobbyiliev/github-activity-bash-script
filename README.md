@@ -26,3 +26,9 @@ Finllly push your changes to GitHub:
 ```
 git push origin -f your_branch_name"
 ```
+
+# Introduction to Bash Scripting
+
+In case that you are interested in learning more about Bash Scripting, make sure to checkout this open-source eBook:
+
+**[Introduction to Bash Scripting](https://github.com/bobbyiliev/introduction-to-bash-scripting)**
