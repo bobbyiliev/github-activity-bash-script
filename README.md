@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/ma
 bash activity.sh
 ```
 
-Finllly push your changes to GitHub:
+Finally, push your changes to GitHub:
 
 ```
 git push origin -f your_branch_name"
