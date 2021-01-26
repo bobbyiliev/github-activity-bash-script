@@ -16,8 +16,15 @@ In 20-30 seconds.
 
 To execute just run the following commaind inside a demo repository:
 
+* First download the script:
+
 ```
 wget https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh
+```
+
+* After that run the script:
+
+```
 bash activity.sh
 ```
 
