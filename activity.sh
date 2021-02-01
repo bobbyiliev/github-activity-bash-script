@@ -41,8 +41,8 @@ for day in {1..365} ; do
     for ((i=1;i<=${commits};i++)); do
         content=$(date -d "$day" +"%s")
         echo ${content}-${i} >> .commits/changes
-        git commit -am "Commit number ${content}-${i}" > /dev/null 2>&1
-        git commit --amend --no-edit --date "${day}" > /dev/null 2>&1
+        git commit -am "Commit number ${content}-${i}"
+        git commit --amend --no-edit --date "${day2}"
     done
 done
 
