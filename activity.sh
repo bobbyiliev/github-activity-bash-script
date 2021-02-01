@@ -29,7 +29,7 @@ fi
 ##
 for day in {1..365} ; do
     # Get the past date of the commit
-    day=$(date --date="-${day} day")
+    day2=$(date --date="-${day} day" "+%a, %d %b %Y %X %z")
 
     echo "Creating commits for ${day}"
 
@@ -39,10 +39,10 @@ for day in {1..365} ; do
     # Create the comits
     echo "Creating ${commits} commits"
     for ((i=1;i<=${commits};i++)); do
-        content=$(date -d "$day" +"%s")
+        content=$(date -d "${day2}" +"%s")
         echo ${content}-${i} >> .commits/changes
         git commit -am "Commit number ${content}-${i}" > /dev/null 2>&1
-        git commit --amend --no-edit --date "${day}" > /dev/null 2>&1
+        git commit --amend --no-edit --date "${day2}" > /dev/null 2>&1
     done
 done
 
