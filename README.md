@@ -16,22 +16,23 @@ In 20-30 seconds.
 
 To execute just run the following commaind inside a demo repository:
 
-* First download the script:
+1. First download the script
+2. After that run the script
+3. Finally, push your changes to GitHub
 
-```
-wget https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh
-```
+# Get started
 
-* After that run the script:
-
-```
-bash activity.sh
-```
-
-Finally, push your changes to GitHub:
-
-```
-git push origin -f your_branch_name"
+```bash
+cwd=$(pwd) && \
+dir=$(mktemp -d -p $cwd test-git-repo-XXXXXXXXX) && \
+mkdir -p $dir && cd $dir && git init && \
+curl -sL 'https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh' | \
+bash -x && \
+git branch -m master main ; \
+echo -e "\n\nTODO push your changes:\n\t\
+  git remote add origin https://github.com/username/reponame\n\t\
+  git push origin --force --set-upstream origin main\n\n" \
+\
 ```
 
 # Introduction to Bash Scripting
