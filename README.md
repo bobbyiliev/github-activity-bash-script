@@ -23,17 +23,22 @@ To execute just run the following commaind inside a demo repository:
 # Get started
 
 ```bash
-cwd=$(pwd) && \
-dir=$(mktemp -d -p $cwd test-git-repo-XXXXXXXXX) && \
-mkdir -p $dir && cd $dir && git init && \
-curl -sL 'https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh' | \
-bash -x && \
-git branch -m master main ; \
-echo -e "\n\nTODO push your changes:\n\t\
-  git remote add origin https://github.com/username/reponame\n\t\
-  git push origin --force --set-upstream origin main\n\n" \
-\
+ACTIVITY_BR=main && MAX_PAST_DAYS=365 && COMMIT_NB= && COMMIT_MAX=7 && \
+curl -sL 'https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh' \
+    | bash ;
 ```
+
+# Environment variables
+
+|       env           |   description         | type          |   default value                | 
+|:-------------------:|:---------------------:|:-------------:|:------------------------------:|
+|   `ACTIVITY_BR`     |   working git branch  |  `string`     |      `main`                    |
+|   `MAX_PAST_DAYS`   |   number of past days |  `integer`    |      `365`                     |
+|   `COMMIT_NB`       |   exactly git commit number each past day.                      | `integer`  |             |
+|   `COMMIT_MAX`      |   randomly git commit number each past day between [1..max]     | `integer`  |   `7`       |
+
+* `COMMIT_MAX` used only if `COMMIT_NB` is empty
+* if both `COMMIT_MAX` and `COMMIT_NB`, randomly commit number each past day between [1..7]
 
 # Introduction to Bash Scripting
 
