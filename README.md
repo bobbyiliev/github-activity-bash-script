@@ -16,23 +16,29 @@ In 20-30 seconds.
 
 To execute just run the following commaind inside a demo repository:
 
-* First download the script:
+1. First download the script
+2. After that run the script
+3. Finally, push your changes to GitHub
 
-```
-wget https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh
+# Get started
+
+```bash
+ACTIVITY_BR=main && MAX_PAST_DAYS=365 && COMMIT_NB= && COMMIT_MAX=7 && \
+curl -sL 'https://raw.githubusercontent.com/bobbyiliev/github-activity-bash-script/main/activity.sh' \
+    | bash ;
 ```
 
-* After that run the script:
+# Environment variables
 
-```
-bash activity.sh
-```
+|       env           |   description         | type          |   default value                | 
+|:-------------------:|:---------------------:|:-------------:|:------------------------------:|
+|   `ACTIVITY_BR`     |   working git branch  |  `string`     |      `main`                    |
+|   `MAX_PAST_DAYS`   |   number of past days |  `integer`    |      `365`                     |
+|   `COMMIT_NB`       |   exactly git commit number each past day.                      | `integer`  |             |
+|   `COMMIT_MAX`      |   randomly git commit number each past day between [1..max]     | `integer`  |   `7`       |
 
-Finally, push your changes to GitHub:
-
-```
-git push origin -f your_branch_name"
-```
+* `COMMIT_MAX` used only if `COMMIT_NB` is empty
+* if both `COMMIT_MAX` and `COMMIT_NB`, randomly commit number each past day between [1..7]
 
 # Introduction to Bash Scripting
 
